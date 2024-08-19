@@ -1,0 +1,46 @@
+body {
+  font-family: "pretendard";
+  font-weight: 400;
+  font-style: normal;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  background-color: #f2e9d8;
+  height: 102px;
+}
+
+.home-logo {
+  width: 130px;
+  height: 40px;
+  padding: 31px 756px 31px 320px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+ul {
+  display: flex;
+  height: 20px;
+  width: 205px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button {
+  background-color: #d97652;
+  color: #fff;
+  border-radius: 40px;
+  width: 140px;
+  height: 50px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.02em;
+  box-sizing: border-box;
+  margin: 26px 320px 26px 49px;
+  padding: 15px 33px 15px 32px;
+}
