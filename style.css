@@ -1,14 +1,13 @@
 body {
-  font-family: "pretendard";
+  font-family: "pretendard", sans-serif;
   font-weight: 400;
-  font-style: normal;
   white-space: nowrap;
 }
 
+/* Header Styles */
 header {
   width: 100%;
   display: flex;
-  flex-direction: row;
   background-color: #f2e9d8;
   height: 102px;
   position: sticky;
@@ -49,19 +48,19 @@ ul {
   font-size: 16px;
   line-height: 20px;
   letter-spacing: 0.02em;
+  padding: 15px 32px;
   box-sizing: border-box;
-  padding: 15px 33px 15px 32px;
 }
 
 header .button {
   margin: 26px 16.67% 26px 49px;
 }
 
+/* Download Section Styles */
 .download {
   background-color: #f2e9d8;
   height: 798px;
   display: flex;
-  flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
 }
@@ -103,9 +102,9 @@ header .button {
   padding-right: 16.67%;
 }
 
+/* Section 2 Styles */
 .section2 {
   display: flex;
-  flex-direction: row;
 }
 
 .section2 img {
@@ -119,7 +118,7 @@ header .button {
 .section2 div {
   display: flex;
   flex-direction: column;
-  padding: 0 0 0 110px;
+  padding-left: 110px;
 }
 
 .section2 .title {
@@ -128,11 +127,12 @@ header .button {
   padding: 172px 16.67% 30px 0;
 }
 
+/* Image Show More Section */
 .image-show-more {
   display: flex;
   flex-direction: column;
-  margin: 120px;
   align-items: center;
+  margin: 120px;
 }
 
 .image-show-more .title,
@@ -149,7 +149,6 @@ header .button {
 .images1,
 .images2 {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   width: 1280px;
 }
@@ -158,8 +157,8 @@ header .button {
 .images2 img {
   width: 388px;
   height: 388px;
-  box-shadow: 10px 10px rgba(255, 255, 255, 0.25);
   border-radius: 30px;
+  box-shadow: 10px 10px rgba(255, 255, 255, 0.25);
 }
 
 .images1 {
@@ -178,19 +177,20 @@ header .button {
   padding: 15px 29px;
 }
 
+/* Map Section */
 .map {
   width: 1280px;
-  border-top: 1px solid #c4c4c4;
+  margin: 80px 16.67% 0 16.67%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 80px 16.67% 0 16.67%;
+  border-top: 1px solid #c4c4c4;
 }
 
 .map .title {
-  padding: 68px 0 20px;
   font-size: 36px;
   line-height: 45px;
+  padding: 68px 0 20px;
 }
 
 .map .content {
@@ -204,6 +204,7 @@ header .button {
   height: 520px;
 }
 
+/* Submit Email Section */
 .submit-email {
   position: relative;
   margin-top: 80px;
@@ -219,7 +220,6 @@ header .button {
   z-index: 2;
   color: #fff;
   display: flex;
-  flex-direction: row;
 }
 
 .submit-text {
@@ -232,7 +232,7 @@ header .button {
   font-size: 36px;
   font-weight: 700;
   line-height: 45px;
-  padding: 0 0 18px;
+  padding-bottom: 18px;
 }
 
 .submit-box .content {
@@ -246,14 +246,13 @@ header .button {
   border-radius: 60px;
   margin: 69px 58px 71px 163px;
   display: flex;
-  flex-direction: row;
   align-items: center;
 }
 
 .submit img {
-  margin: 0 0 0 28px;
   width: 24px;
   height: 24px;
+  margin-left: 28px;
 }
 
 input {
@@ -262,8 +261,7 @@ input {
   margin: 20px 137px 20px 16px;
   padding-block: 0;
   padding-inline: 0;
-  border: 0;
-  place-content: 16px;
+  border: none;
 }
 
 input::placeholder {
@@ -282,10 +280,11 @@ input::placeholder {
   top: 110px;
   left: 0;
   z-index: 1;
-  width: 1920px;
+  width: 100%;
   height: 340px;
 }
 
+/* Footer Styles */
 footer {
   padding: 20px;
   width: 100%;
@@ -298,8 +297,8 @@ footer .logo {
   padding: 285px 816px 45px 16.67%;
 }
 
-.icon img {
+footer img:not(.logo) {
   width: 42px;
   height: 42px;
-  padding: 288px 10px 60px 10px;
+  padding: 288px 10px 60px;
 }
