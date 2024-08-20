@@ -125,3 +125,52 @@ header .button {
   line-height: 45px;
   padding: 172px 16.67% 30px 0;
 }
+
+.image-show-more {
+  display: flex;
+  flex-direction: column;
+  margin-top: 120px;
+  align-items: center;
+}
+
+.image-show-more .title,
+.dummy-text {
+  font-weight: 700;
+  color: #d97652;
+}
+
+.image-show-more .content {
+  padding-top: 40px;
+  text-align: center;
+}
+
+.images1, .images2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 1280px;
+}
+
+.images1 img,
+.images2 img {
+  width: 388px;
+  height: 388px;
+  box-shadow: 10px 10px rgba(255, 255, 255, 0.25);
+  border-radius: 30px;
+}
+
+.images1 {
+  margin-top: 88px;
+}
+
+.continue {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  padding-top: 100px;
+}
+
+.image-show-more .button {
+  margin-top: 28px;
+  padding: 15px 29px;
+}
