@@ -12,6 +12,7 @@ header {
   height: 102px;
   position: sticky;
   top: 0;
+  z-index: 1000;
 }
 
 h1 {
@@ -129,7 +130,7 @@ header .button {
 .image-show-more {
   display: flex;
   flex-direction: column;
-  margin-top: 120px;
+  margin: 120px;
   align-items: center;
 }
 
@@ -173,4 +174,30 @@ header .button {
 .image-show-more .button {
   margin-top: 28px;
   padding: 15px 29px;
+}
+
+.map {
+  width: 1280px;
+  border-top: 1px solid #C4C4C4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 80px 16.67% 0 16.67%;
+}
+
+.map .title {
+  padding: 68px 0 20px;
+  font-size: 36px;
+  line-height: 45px;
+}
+
+.map .content {
+  font-weight: 500;
+  color: #606367;
+  padding-bottom: 48px;
+}
+
+#map {
+  width: 1280px;
+  height: 520px;
 }

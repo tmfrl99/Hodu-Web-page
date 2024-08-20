@@ -10,6 +10,10 @@
     />
     <link rel="stylesheet" href="./reset.css" />
     <link rel="stylesheet" href="./style.css" />
+    <script
+      type="text/javascript"
+      src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=d879208afc23abbad54822d0f6418f25"
+    ></script>
     <title>HODU</title>
   </head>
   <body>
@@ -65,9 +69,9 @@
         <section class="image-show-more">
           <p class="title">dummy text of the printing and dummy</p>
           <p class="content">
-            Lorem Ipsum is simply <span class="dummy-text">dummy text</span> of the printing and typesetting
-            industry.<br />Lorem Ipsum has been the industry's standard dummy
-            text ever since the 1500s, when an unknown
+            Lorem Ipsum is simply <span class="dummy-text">dummy text</span> of
+            the printing and typesetting industry.<br />Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown
           </p>
           <div class="images1">
             <img
@@ -93,7 +97,16 @@
           <p class="content">
             330, Cheomdan-ro, Jeju-si, Jeju-do, Republic of Korea
           </p>
-          <div id="map" style="width: 1278px; height: 520px"></div>
+          <div id="map"></div>
+          <script>
+            const container = document.getElementById("map");
+            const options = {
+              center: new kakao.maps.LatLng(33.4423468, 126.5714523),
+              level: 3,
+            };
+
+            const map = new kakao.maps.Map(container, options);
+          </script>
         </section>
         <section class="submit-email">
           <p class="title">Subscribe to our Blog post</p>
