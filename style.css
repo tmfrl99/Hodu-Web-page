@@ -20,7 +20,7 @@ h1 {
   clip-path: polygon(0 0, 0 0, 0 0);
 }
 
-.home-logo {
+.logo {
   width: 130px;
   height: 40px;
   padding: 31px 756px 31px 16.67%;
@@ -282,6 +282,24 @@ input::placeholder {
   top: 110px;
   left: 0;
   z-index: 1;
+  width: 1920px;
+  height: 340px;
+}
+
+footer {
+  padding: 20px;
   width: 100%;
-  height: auto;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+footer .logo {
+  padding: 285px 816px 45px 16.67%;
+}
+
+.icon img {
+  width: 42px;
+  height: 42px;
+  padding: 288px 10px 60px 10px;
 }
