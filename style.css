@@ -6,6 +6,7 @@ body {
 }
 
 header {
+  width: 100%;
   display: flex;
   flex-direction: row;
   background-color: #f2e9d8;
@@ -145,7 +146,8 @@ header .button {
   text-align: center;
 }
 
-.images1, .images2 {
+.images1,
+.images2 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -178,7 +180,7 @@ header .button {
 
 .map {
   width: 1280px;
-  border-top: 1px solid #C4C4C4;
+  border-top: 1px solid #c4c4c4;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -200,4 +202,86 @@ header .button {
 #map {
   width: 1280px;
   height: 520px;
+}
+
+.submit-email {
+  position: relative;
+  margin-top: 80px;
+}
+
+.submit-box {
+  background-color: #263140;
+  border-radius: 30px;
+  width: 1280px;
+  height: 200px;
+  margin: 0 16.67%;
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+}
+
+.submit-text {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 0 0 58px;
+}
+
+.submit-box .title {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 45px;
+  padding: 0 0 18px;
+}
+
+.submit-box .content {
+  font-size: 14px;
+}
+
+.submit {
+  background-color: #fff;
+  width: 530px;
+  height: 60px;
+  border-radius: 60px;
+  margin: 69px 58px 71px 163px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.submit img {
+  margin: 0 0 0 28px;
+  width: 24px;
+  height: 24px;
+}
+
+input {
+  width: 184px;
+  height: 20px;
+  margin: 20px 137px 20px 16px;
+  padding-block: 0;
+  padding-inline: 0;
+  border: 0;
+  place-content: 16px;
+}
+
+input::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.submit .button {
+  width: 135px;
+  padding: 15px 29px;
+}
+
+.background-img2 {
+  position: absolute;
+  top: 110px;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: auto;
 }
