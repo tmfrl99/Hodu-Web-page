@@ -207,7 +207,7 @@ header .button {
 /* Submit Email Section */
 .submit-email {
   position: relative;
-  margin-top: 80px;
+  margin-top: 80px; 
 }
 
 .submit-box {
@@ -301,4 +301,29 @@ footer img:not(.logo) {
   width: 42px;
   height: 42px;
   padding: 288px 10px 60px;
+}
+
+/* Scroll Top Button Styles */
+#top-btn { 
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 999;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid #C4C4C4;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+#top-btn img {
+  width: 20px;
+  height: 12.35px;
+  padding-top: 2px;
+}
+
+#top-btn:hover img {
+  content: url('./img/scroll-btn-aft.png');
 }
