@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
+
+  // top 버튼
   const topBtn = document.getElementById("top-btn");
 
   // 초기 상태 설정
@@ -27,4 +29,13 @@ document.addEventListener("DOMContentLoaded", function () {
       behavior: "smooth",
     });
   });
+
+  // map 출력
+  const container = document.getElementById("map");
+  const options = {
+    center: new kakao.maps.LatLng(33.4423468, 126.5714523),
+    level: 3,
+  };
+
+  const map = new kakao.maps.Map(container, options);
 });
