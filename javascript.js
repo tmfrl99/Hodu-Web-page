@@ -1,8 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-
-  // top 버튼
-  const topBtn = document.getElementById("top-btn");
-  const footer = document.querySelector("footer");
+  const topBtn = document.getElementById("top-btn"); // top 버튼
+  const footer = document.querySelector("footer"); // footer
 
   // 초기 상태 설정
   topBtn.style.opacity = "0";
@@ -31,14 +29,17 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  // 화면과 footer의 길이를 계산해서 top 버튼을 footer 바로 위에 고정시키기
   function adjustButtonPosition() {
     const footerRect = footer.getBoundingClientRect();
     const windowHeight = window.innerHeight;
     const buttonHeight = topBtn.offsetHeight;
-    const imgHeight = document.querySelector('.background-img2').offsetHeight;
+    const imgHeight = document.querySelector(".background-img2").offsetHeight;
 
     if (footerRect.top <= windowHeight - imgHeight + 40) {
-      topBtn.style.bottom = `${windowHeight - footerRect.top - imgHeight + buttonHeight + 40}px`;
+      topBtn.style.bottom = `${
+        windowHeight - footerRect.top - imgHeight + buttonHeight + 40
+      }px`;
     } else {
       topBtn.style.bottom = "40px";
     }
