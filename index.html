@@ -20,7 +20,7 @@
   <body>
     <div class="container">
       <button id="top-btn">
-        <img src="./img/scroll-btn-bf.png" alt="Scroll to Top">
+        <img src="./img/scroll-btn-bf.png" alt="Scroll to Top" />
       </button>
       <header>
         <h1>HODU</h1>
@@ -113,10 +113,23 @@
                 dummy text
               </p>
             </div>
-            <div class="submit">
+            <form class="subscribe-form">
               <img src="./img/mail.png" alt="메일 로고" />
-              <input type="email" placeholder="Enter your e-mail address" />
-              <a href="#" class="button">Subscribe</a>
+              <input
+                type="email"
+                id="email-input"
+                placeholder="Enter your e-mail address"
+                required
+              />
+              <button class="button submit-button">Subscribe</button>
+            </form>
+            <div class="modal hidden">
+              <img src="./img/img_cat.png" alt="고양이 호두 사진" />
+              <p class="title">Thank you!</p>
+              <p class="content">
+                Lorem Ipsum is simply dummy text of the printing industry.
+              </p>
+              <button class="submit-form button">OK! I Love HODU</button>
             </div>
           </div>
           <img

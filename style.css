@@ -136,7 +136,8 @@ header .button {
 }
 
 .image-show-more .title,
-.dummy-text {
+.dummy-text,
+.modal .title {
   font-weight: 700;
   color: #d97652;
 }
@@ -207,7 +208,7 @@ header .button {
 /* Submit Email Section */
 .submit-email {
   position: relative;
-  margin-top: 80px; 
+  margin-top: 80px;
 }
 
 .submit-box {
@@ -220,12 +221,14 @@ header .button {
   z-index: 2;
   color: #fff;
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .submit-text {
   display: flex;
   flex-direction: column;
-  padding: 50px 0 0 58px;
+  padding-left: 58px;
 }
 
 .submit-box .title {
@@ -239,7 +242,7 @@ header .button {
   font-size: 14px;
 }
 
-.submit {
+.subscribe-form {
   background-color: #fff;
   width: 530px;
   height: 60px;
@@ -249,16 +252,16 @@ header .button {
   align-items: center;
 }
 
-.submit img {
+.subscribe-form img {
   width: 24px;
   height: 24px;
   margin-left: 28px;
 }
 
 input {
-  width: 184px;
+  width: 190px;
   height: 20px;
-  margin: 20px 137px 20px 16px;
+  margin: 20px 131px 20px 16px;
   padding-block: 0;
   padding-inline: 0;
   border: none;
@@ -270,7 +273,7 @@ input::placeholder {
   line-height: 20px;
 }
 
-.submit .button {
+.subscribe-form .button {
   width: 135px;
   padding: 15px 29px;
 }
@@ -282,6 +285,45 @@ input::placeholder {
   z-index: 1;
   width: 100%;
   height: 340px;
+}
+
+/* Modal Styles */
+.modal {
+  width: 600px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("./img/modal_background.png");
+  border-radius: 30px;
+  position: absolute;
+  box-shadow: 0px 0px 30px 0px #00000033;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal img {
+  width: 110px;
+  height: 112px;
+  padding-top: 60px;
+}
+
+.modal .title {
+  padding: 24px 0 12px;
+}
+
+.modal .content {
+  color: #000;
+  line-height: 18px;
+  padding-bottom: 38px;
+}
+
+.modal .button {
+  width: 183px;
+  padding: 15px 25px;
+  letter-spacing: 0.01em;
 }
 
 /* Footer Styles */
@@ -304,13 +346,13 @@ footer img:not(.logo) {
 }
 
 /* Scroll Top Button Styles */
-#top-btn { 
+#top-btn {
   position: fixed;
   bottom: 40px;
   right: 40px;
   z-index: 999;
   background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid #C4C4C4;
+  border: 1px solid #c4c4c4;
   cursor: pointer;
   padding: 10px;
   border-radius: 50%;
@@ -325,5 +367,5 @@ footer img:not(.logo) {
 }
 
 #top-btn:hover img {
-  content: url('./img/scroll-btn-aft.png');
+  content: url("./img/scroll-btn-aft.png");
 }
