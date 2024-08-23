@@ -13,6 +13,8 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
+  align-items: center;
+  box-sizing: border-box;
 }
 
 h1 {
@@ -20,20 +22,24 @@ h1 {
 }
 
 .logo {
+  padding-left: 16.67%;
+}
+
+.logo img {
   width: 130px;
   height: 40px;
-  padding: 31px 756px 31px 16.67%;
 }
 
 nav {
   display: flex;
   align-items: center;
+  margin-left: 39.375%;
 }
 
 ul {
-  display: flex;
   height: 20px;
   width: 205px;
+  display: flex;
   justify-content: space-between;
   align-items: center;
 }
@@ -41,33 +47,34 @@ ul {
 .button {
   background-color: #d97652;
   color: #fff;
-  border-radius: 40px;
   width: 140px;
   height: 50px;
+  border-radius: 40px;
+  padding: 15px 32px;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
   letter-spacing: 0.02em;
-  padding: 15px 32px;
   box-sizing: border-box;
 }
 
 header .button {
-  margin: 26px 16.67% 26px 49px;
+  margin-left: 49px;
 }
 
 /* Download Section Styles */
 .download {
   background-color: #f2e9d8;
-  height: 798px;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-start;
+  box-sizing: border-box;
 }
 
 .download-div {
   display: flex;
   flex-direction: column;
+  flex: 1;
   padding-left: 16.67%;
 }
 
@@ -83,10 +90,6 @@ header .button {
   line-height: 20px;
 }
 
-.download .title {
-  padding-top: 200px;
-}
-
 .download .content {
   padding-top: 40px;
 }
@@ -96,20 +99,23 @@ header .button {
 }
 
 .background-img {
-  width: 415px;
-  height: 766px;
-  margin: 32px 0 0 170px;
+  width: 100%;
+  max-width: 415px;
+  height: auto;
+  margin-left: 8.4%;
   padding-right: 16.67%;
 }
 
 /* Section 2 Styles */
 .section2 {
   display: flex;
+  justify-content: center;
 }
 
 .section2 img {
-  width: 660px;
-  height: 390px;
+  width: 100%;
+  max-width: 660px;
+  height: auto;
   border-radius: 30px;
   box-shadow: 10px 10px rgba(255, 255, 255, 0.25);
   padding: 80px 0 0 16.67%;
@@ -118,7 +124,8 @@ header .button {
 .section2 div {
   display: flex;
   flex-direction: column;
-  padding-left: 110px;
+  padding-left: 5.21%;
+  flex: 1;
 }
 
 .section2 .title {
@@ -180,7 +187,7 @@ header .button {
 
 /* Map Section */
 .map {
-  width: 1280px;
+  width: 66.67%;
   margin: 80px 16.67% 0 16.67%;
   display: flex;
   flex-direction: column;
@@ -201,7 +208,7 @@ header .button {
 }
 
 #map {
-  width: 1280px;
+  width: 100%;
   height: 520px;
 }
 
@@ -214,21 +221,27 @@ header .button {
 .submit-box {
   background-color: #263140;
   border-radius: 30px;
-  width: 1280px;
+  width: 80%;
+  max-width: 1280px;
   height: 200px;
-  margin: 0 16.67%;
+  margin: 0 auto;
   position: relative;
   z-index: 2;
   color: #fff;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  flex-wrap: wrap;
 }
 
 .submit-text {
   display: flex;
   flex-direction: column;
   padding-left: 58px;
+  flex: 1 1 300px;
+  min-width: 200px;
+  word-wrap: break-word;
 }
 
 .submit-box .title {
@@ -244,12 +257,16 @@ header .button {
 
 .subscribe-form {
   background-color: #fff;
-  width: 530px;
+  width: auto;
+  max-width: 530px;
   height: 60px;
   border-radius: 60px;
-  margin: 69px 58px 71px 163px;
+  margin: 0 58px 0 30px;
   display: flex;
   align-items: center;
+  flex: 1 1 300px;
+  min-width: 200px;
+  word-wrap: break-word;
 }
 
 .subscribe-form img {
@@ -259,11 +276,9 @@ header .button {
 }
 
 input {
-  width: 190px;
-  height: 20px;
-  margin: 20px 131px 20px 16px;
-  padding-block: 0;
-  padding-inline: 0;
+  width: 100%;
+  margin: 0 16px;
+  padding: 0;
   border: none;
 }
 
@@ -276,6 +291,7 @@ input::placeholder {
 .subscribe-form .button {
   width: 135px;
   padding: 15px 29px;
+  margin-right: 6px;
 }
 
 .background-img2 {
@@ -294,10 +310,16 @@ input::placeholder {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   background-image: url("./img/modal_background.png");
+  background-size: cover;
   border-radius: 30px;
-  position: absolute;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   box-shadow: 0px 0px 30px 0px #00000033;
+  z-index: 1000;
 }
 
 .hidden {
@@ -328,21 +350,26 @@ input::placeholder {
 
 /* Footer Styles */
 footer {
-  padding: 20px;
   width: 100%;
-  position: relative;
   display: flex;
   flex-direction: row;
+  justify-content: flex-start;
+  align-items: end;
+  position: relative;
+  padding-top: 250px;
+  height: 160px;
 }
 
 footer .logo {
-  padding: 285px 816px 45px 16.67%;
+  padding: 0 42.03% 45px 16.67%;
+  width: 226px;
+  height: 70px;
 }
 
 footer img:not(.logo) {
   width: 42px;
   height: 42px;
-  padding: 288px 10px 60px;
+  padding: 0 10px 60px;
 }
 
 /* Scroll Top Button Styles */

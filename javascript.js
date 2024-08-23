@@ -38,7 +38,7 @@ function init() {
 
     if (footerRect.top <= windowHeight - imgHeight + 40) {
       topBtn.style.bottom = `${
-        windowHeight - footerRect.top - imgHeight + buttonHeight + 40
+        windowHeight - footerRect.top - imgHeight + 130
       }px`;
     } else {
       topBtn.style.bottom = "40px";
@@ -121,11 +121,13 @@ function init() {
   // 모달창 띄우기
   function showModal() {
     modal.classList.remove("hidden");
+    document.body.style.overflow = 'hidden';
   }
 
   // 모달창의 버튼 클릭 시
   submitForm.addEventListener("click", function () {
     modal.classList.add("hidden");
+    document.body.style.overflow = '';
     form.submit();
   });
 }
