@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+function init() {
   const topBtn = document.getElementById("top-btn"); // top 버튼
   const footer = document.querySelector("footer"); // footer
 
@@ -51,13 +51,15 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("resize", adjustButtonPosition);
 
   // map 출력
-  const container = document.getElementById("map");
-  const options = {
-    center: new kakao.maps.LatLng(33.4423468, 126.5714523),
-    level: 3,
-  };
+  kakao.maps.load(function () {
+    const container = document.getElementById("map");
+    const options = {
+      center: new kakao.maps.LatLng(33.4423468, 126.5714523),
+      level: 3,
+    };
 
-  const map = new kakao.maps.Map(container, options);
+    const map = new kakao.maps.Map(container, options);
+  });
 
   // 이메일 유효성 검사 후 modal창 띄우기
   const submit = document.querySelector(".submit-button");
@@ -126,4 +128,11 @@ document.addEventListener("DOMContentLoaded", function () {
     modal.classList.add("hidden");
     form.submit();
   });
-});
+}
+
+// DOMContentLoaded가 발생했는지 확인하고 초기화
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", init);
+} else {
+  init();
+}
