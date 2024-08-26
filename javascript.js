@@ -51,15 +51,26 @@ function init() {
   window.addEventListener("resize", adjustButtonPosition);
 
   // map 출력
-  kakao.maps.load(function () {
-    const container = document.getElementById("map");
-    const options = {
-      center: new kakao.maps.LatLng(33.4423468, 126.5714523),
-      level: 3,
-    };
+  if (typeof kakao !== "undefined" && kakao.maps) { // 카카오맵 API가 로드된 경우
+    kakao.maps.load(function () {
+      const container = document.getElementById("map");
+      const options = {
+        center: new kakao.maps.LatLng(33.4423468, 126.5714523),
+        level: 3,
+      };
 
-    const map = new kakao.maps.Map(container, options);
-  });
+      const map = new kakao.maps.Map(container, options);
+    });
+  } else { // 카카오맵 API가 로드되지 않은 경우
+    const mapContainer = document.getElementById("map");
+    const mapImage = document.createElement("img");
+    mapImage.src = "./img/map.png";
+    mapImage.alt = "지도 이미지";
+    mapImage.style.width = "100%";
+    mapImage.style.height = "100%";
+
+    mapContainer.replaceWith(mapImage);
+  }
 
   // 이메일 유효성 검사 후 modal창 띄우기
   const submit = document.querySelector(".submit-button");
@@ -121,13 +132,13 @@ function init() {
   // 모달창 띄우기
   function showModal() {
     modal.classList.remove("hidden");
-    document.body.style.overflow = 'hidden';
+    document.body.style.overflow = "hidden";
   }
 
   // 모달창의 버튼 클릭 시
   submitForm.addEventListener("click", function () {
     modal.classList.add("hidden");
-    document.body.style.overflow = '';
+    document.body.style.overflow = "";
     form.submit();
   });
 }
