@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="./reset.css" />
     <link rel="stylesheet" href="./style.css" />
     <!-- Git pages 배포 후 API 키 값 문제로 인해 이미지로 변경. 로컬에서는 API 사용 가능 -->
-    <!-- <script src="./config/apikey.js"></script> -->
-    <!-- <script>
+    <!-- <script src="./config/apikey.js"></script>
+    <script>
       const script = document.createElement("script");
       script.type = "text/javascript";
       script.src = `https://dapi.kakao.com/v2/maps/sdk.js?appkey=${window.apiKey}&autoload=false`;
@@ -33,138 +33,176 @@
       <button id="top-btn">
         <img src="./img/scroll-btn-bf.png" alt="Scroll to Top" />
       </button>
-      <header>
-        <h1>HODU</h1>
-        <a href="#" class="logo">
-          <img src="./img/logo.png" alt="HODU logo" />
-        </a>
-        <nav>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Support</a></li>
-          </ul>
-        </nav>
-        <a href="#" class="button">Download</a>
-      </header>
+      <div class="wrap">
+        <header>
+          <div class="wrap-header">
+            <h1 class="wrap-header-logo">
+              <a href="#" class="logo">
+                <img src="./img/logo.png" alt="HODU" />
+              </a>
+            </h1>
+            <nav class="wrap-header-nav">
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Support</a></li>
+              </ul>
+              <a href="#" class="button">Download</a>
+            </nav>
+          </div>
+        </header>
+      </div>
       <main>
-        <section class="download">
-          <div class="download-div">
-            <p class="title">
-              Lorem Ipsum is simply <br />
-              dummy text of the printing and
-            </p>
-            <p class="content">
-              Lorem Ipsum is simply dummy text of the printing and
-              <br />typesetting industry. <br />Lorem Ipsum has been the
-              industry's standard dummy text <br />ever since the 1500s, when an
-              unknown
-            </p>
-            <a href="#" class="button">Download</a>
-          </div>
-          <img
-            class="background-img"
-            src="./img/img_1.png"
-            alt="박스를 쓴 고양이 호두 사진"
-          />
-        </section>
-        <section class="section2">
-          <img src="./img/img_2.png" alt="누워있는 고양이 호두 사진" />
-          <div class="section2-div">
-            <p class="title">
-              Lorem Ipsum is simply <br />
-              dummy text of the printing <br />and dummy text
-            </p>
-            <p class="content">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              <br />industry.
-            </p>
-          </div>
-        </section>
-        <section class="image-show-more">
-          <p class="title">dummy text of the printing and dummy</p>
-          <p class="content">
-            Lorem Ipsum is simply <span class="dummy-text">dummy text</span> of
-            the printing and typesetting industry.<br />Lorem Ipsum has been the
-            industry's standard dummy text ever since the 1500s, when an unknown
-          </p>
-          <div class="images1">
-            <img
-              src="./img/img_3.png"
-              alt="캣타워에 엎드려있는 고양이 호두 사진"
-            />
-            <img src="./img/img_4.png" alt="벽보고 앉아있는 고양이 호두 사진" />
-            <img
-              src="./img/img_5.png"
-              alt="멀리서 카메라를 응시하는 고양이 호두 사진"
-            />
-          </div>
-          <div class="images2">
-            <img src="./img/img_6.png" alt="얼굴로 가득찬 고양이 호두 사진" />
-            <img src="./img/img_7.png" alt="고양이 호두 사진" />
-            <img src="./img/img_8.png" alt="하품하는 고양이 호두 사진" />
-          </div>
-          <p class="continue">Continue exploring HODU</p>
-          <a href="#" class="button">Show more</a>
-        </section>
-        <section class="map">
-          <p class="title">Where you'll be</p>
-          <p class="content">
-            330, Cheomdan-ro, Jeju-si, Jeju-do, Republic of Korea
-          </p>
-          <div id="map"></div>
-        </section>
-        <section class="submit-email">
-          <div class="submit-box">
-            <div class="submit-text">
-              <p class="title">Subscribe to our Blog post</p>
-              <p class="content">
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.<br />Lorem Ipsum has been the industry's standard
-                dummy text
-              </p>
-            </div>
-            <form class="subscribe-form">
-              <img src="./img/mail.png" alt="메일 로고" />
-              <input
-                type="email"
-                id="email-input"
-                placeholder="Enter your e-mail address"
-                required
+        <div class="wrap">
+          <section class="download">
+            <div class="wrap-download">
+              <div class="download-div">
+                <p class="title">
+                  Lorem Ipsum is simply<br />dummy text of the printing and
+                </p>
+                <p class="content">
+                  Lorem Ipsum is simply dummy text of the printing and<br />typesetting
+                  industry. <br />Lorem Ipsum has been the industry's standard
+                  dummy text<br />ever since the 1500s, when an unknown
+                </p>
+                <a href="#" class="button">Download</a>
+              </div>
+              <img
+                class="background-img"
+                src="./img/img_1.png"
+                alt="박스를 쓴 고양이 호두 사진"
               />
-              <button class="button submit-button">Subscribe</button>
-            </form>
-            <div class="modal hidden">
-              <img src="./img/img_cat.png" alt="고양이 호두 사진" />
-              <p class="title">Thank you!</p>
+            </div>
+          </section>
+        </div>
+        <div class="wrap">
+          <section class="section2">
+            <div class="wrap-section2">
+              <div class="img-container">
+                <img src="./img/img_2.png" alt="누워있는 고양이 호두 사진" />
+              </div>
+              <div class="section2-div">
+                <p class="title">
+                  Lorem Ipsum is simply<br />dummy text of the printing<br />and
+                  dummy text
+                </p>
+                <p class="content">
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting<br />industry.
+                </p>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="wrap">
+          <section class="image-show-more">
+            <div class="wrap-img-show-more">
+              <p class="title">dummy text of the printing and dummy</p>
               <p class="content">
-                Lorem Ipsum is simply dummy text of the printing industry.
+                Lorem Ipsum is simply
+                <span class="dummy-text">dummy text</span> of the printing and
+                typesetting industry.<br />Lorem Ipsum has been the industry's
+                standard dummy text ever since the 1500s, when an unknown
               </p>
-              <button class="submit-form button">OK! I Love HODU</button>
+              <div class="images1">
+                <img
+                  src="./img/img_3.png"
+                  alt="캣타워에 엎드려있는 고양이 호두 사진"
+                />
+                <img
+                  src="./img/img_4.png"
+                  alt="벽보고 앉아있는 고양이 호두 사진"
+                />
+                <img
+                  src="./img/img_5.png"
+                  alt="멀리서 카메라를 응시하는 고양이 호두 사진"
+                />
+              </div>
+              <div class="images2">
+                <img
+                  src="./img/img_6.png"
+                  alt="얼굴로 가득찬 고양이 호두 사진"
+                />
+                <img src="./img/img_7.png" alt="고양이 호두 사진" />
+                <img src="./img/img_8.png" alt="하품하는 고양이 호두 사진" />
+              </div>
+              <p class="continue">Continue exploring HODU</p>
+              <a href="#" class="button">Show more</a>
+            </div>
+          </section>
+        </div>
+        <div class="wrap">
+          <section class="map">
+            <div class="wrap-map">
+              <p class="title">Where you'll be</p>
+              <p class="content">
+                330, Cheomdan-ro, Jeju-si, Jeju-do, Republic of Korea
+              </p>
+              <div id="map"></div>
+            </div>
+          </section>
+        </div>
+        <div class="wrap">
+          <section class="submit-email">
+            <div class="wrap-submit-email">
+              <div class="submit-box">
+                <div class="submit-text">
+                  <p class="title">Subscribe to our Blog post</p>
+                  <p class="content">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry.<br />Lorem Ipsum has been the
+                    industry's standard dummy text
+                  </p>
+                </div>
+                <form class="subscribe-form">
+                  <img src="./img/mail.png" alt="메일 로고" />
+                  <input
+                    type="email"
+                    id="email-input"
+                    placeholder="Enter your e-mail address"
+                    required
+                  />
+                  <button class="button submit-button">Subscribe</button>
+                </form>
+                <div class="modal hidden">
+                  <img src="./img/img_cat.png" alt="고양이 호두 사진" />
+                  <p class="title">Thank you!</p>
+                  <p class="content">
+                    Lorem Ipsum is simply dummy text of the printing industry.
+                  </p>
+                  <button class="submit-form button">OK! I Love HODU</button>
+                </div>
+              </div>
+              <img
+                class="background-img2"
+                src="./img/img_9.png"
+                alt="고양이 호두 사진"
+              />
+            </div>
+          </section>
+        </div>
+      </main>
+      <div class="wrap">
+        <footer>
+          <div class="wrap-footer">
+            <img class="logo" src="./img/logo.png" alt="hodu" />
+            <div class="logos">
+              <a href="#">
+                <img src="./img/icon-blog.png" alt="블로그 아이콘" />
+              </a>
+              <a href="#">
+                <img src="./img/icon-insta.png" alt="인스타그램 아이콘" />
+              </a>
+              <a href="#">
+                <img src="./img/icon-facebook.png" alt="페이스북 아이콘" />
+              </a>
+              <a href="#">
+                <img src="./img/icon-youtube.png" alt="유튜브 아이콘" />
+              </a>
             </div>
           </div>
-          <img
-            class="background-img2"
-            src="./img/img_9.png"
-            alt="고양이 호두 사진"
-          />
-        </section>
-      </main>
-      <footer>
-        <img class="logo" src="./img/logo.png" alt="hodu" />
-        <a href="#">
-          <img src="./img/icon-blog.png" alt="블로그 아이콘" />
-        </a>
-        <a href="#">
-          <img src="./img/icon-insta.png" alt="인스타그램 아이콘" />
-        </a>
-        <a href="#">
-          <img src="./img/icon-facebook.png" alt="페이스북 아이콘" />
-        </a>
-        <a href="#">
-          <img src="./img/icon-youtube.png" alt="유튜브 아이콘" />
-        </a>
-      </footer>
+        </footer>
+      </div>
     </div>
   </body>
 </html>

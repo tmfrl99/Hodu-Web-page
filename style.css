@@ -4,25 +4,26 @@ body {
   white-space: nowrap;
 }
 
+.wrap {
+  min-width: 1320px;
+}
+
 /* Header Styles */
 header {
-  width: 100%;
-  display: flex;
-  background-color: #f2e9d8;
-  height: 102px;
   position: sticky;
   top: 0;
   z-index: 1000;
-  align-items: center;
+  background-color: #f2e9d8;
   box-sizing: border-box;
 }
 
-h1 {
-  clip-path: polygon(0 0, 0 0, 0 0);
-}
-
-.logo {
-  padding-left: 16.67%;
+.wrap-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1280px;
+  height: 102px;
+  margin: 0 auto;
 }
 
 .logo img {
@@ -30,10 +31,14 @@ h1 {
   height: 40px;
 }
 
+.wrap-header-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
 nav {
   display: flex;
   align-items: center;
-  margin-left: 39.375%;
 }
 
 ul {
@@ -63,19 +68,23 @@ header .button {
 }
 
 /* Download Section Styles */
+.wrap-download {
+  display: flex;
+  justify-content: space-between;
+  width: 1280px;
+  height: 798px;
+  margin: 0 auto;
+}
+
 .download {
   background-color: #f2e9d8;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  box-sizing: border-box;
 }
 
 .download-div {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   flex: 1;
-  padding-left: 16.67%;
 }
 
 .title {
@@ -102,44 +111,53 @@ header .button {
   width: 100%;
   max-width: 415px;
   height: auto;
-  margin-left: 8.4%;
-  padding-right: 16.67%;
 }
 
 /* Section 2 Styles */
-.section2 {
+.wrap-section2 {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  width: 1280px;
+  height: 550px;
+  margin: 0 auto;
+}
+
+.img-container {
+  width: 660px;
+  height: 390px;
+  box-sizing: border-box;
+  box-shadow: 10px 10px rgba(255, 255, 255, 0.25);
+  border-radius: 30px;
+  overflow: hidden;
+  margin-right: 110px;
 }
 
 .section2 img {
   width: 100%;
-  max-width: 660px;
-  height: auto;
-  border-radius: 30px;
-  box-shadow: 10px 10px rgba(255, 255, 255, 0.25);
-  padding: 80px 0 0 16.67%;
+  height: 100%;
+  display: block;
 }
 
-.section2 div {
+.section2-div {
   display: flex;
   flex-direction: column;
-  padding-left: 5.21%;
+  justify-content: center;
   flex: 1;
 }
 
 .section2 .title {
   font-size: 36px;
   line-height: 45px;
-  padding: 172px 16.67% 30px 0;
+  padding-bottom: 30px;
 }
 
 /* Image Show More Section */
-.image-show-more {
+.wrap-img-show-more {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 120px;
+  width: 1280px;
+  margin: 0 auto;
 }
 
 .image-show-more .title,
@@ -159,14 +177,16 @@ header .button {
   display: flex;
   justify-content: space-between;
   width: 1280px;
+  box-sizing: border-box;
+  border-radius: 30px;
+  box-shadow: 10px 10px rgba(255, 255, 255, 0.25);
 }
 
 .images1 img,
 .images2 img {
   width: 388px;
   height: 388px;
-  border-radius: 30px;
-  box-shadow: 10px 10px rgba(255, 255, 255, 0.25);
+  display: block;
 }
 
 .images1 {
@@ -181,18 +201,17 @@ header .button {
 }
 
 .image-show-more .button {
-  margin-top: 28px;
+  margin: 28px 0 80px;
   padding: 15px 29px;
 }
 
 /* Map Section */
-.map {
-  width: 66.67%;
-  margin: 80px 16.67% 0 16.67%;
+.wrap-map {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   border-top: 1px solid #c4c4c4;
+  width: 1280px;
+  margin: 0 auto;
 }
 
 .map .title {
@@ -213,7 +232,7 @@ header .button {
 }
 
 /* Submit Email Section */
-.submit-email {
+.wrap-submit-email {
   position: relative;
   margin-top: 80px;
 }
@@ -349,27 +368,31 @@ input::placeholder {
 }
 
 /* Footer Styles */
-footer {
-  width: 100%;
+.wrap-footer {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: end;
-  position: relative;
-  padding-top: 250px;
+  justify-content: space-between;
+  align-items: center;
+  width: 1280px;
   height: 160px;
+  padding-top: 250px;
+  margin: 0 auto;
 }
 
 footer .logo {
-  padding: 0 42.03% 45px 16.67%;
   width: 226px;
   height: 70px;
 }
 
-footer img:not(.logo) {
+.logos {
+  display: flex;
+  justify-content: space-between;
+  width: 228px;
+  height: 42px;
+}
+
+.logos img {
   width: 42px;
   height: 42px;
-  padding: 0 10px 60px;
 }
 
 /* Scroll Top Button Styles */
