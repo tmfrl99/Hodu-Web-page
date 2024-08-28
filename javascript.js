@@ -33,7 +33,6 @@ function init() {
   function adjustButtonPosition() {
     const footerRect = footer.getBoundingClientRect();
     const windowHeight = window.innerHeight;
-    const buttonHeight = topBtn.offsetHeight;
     const imgHeight = document.querySelector(".background-img2").offsetHeight;
 
     if (footerRect.top <= windowHeight - imgHeight + 40) {
@@ -73,14 +72,14 @@ function init() {
   }
 
   // 이메일 유효성 검사 후 modal창 띄우기
-  const submit = document.querySelector(".submit-button");
+  const submitBtn = document.querySelector(".submit-button");
   const emailInput = document.getElementById("email-input");
   const modal = document.querySelector(".modal");
   const submitForm = document.querySelector(".submit-form");
   const form = document.querySelector(".subscribe-form");
 
   // Subscribe 버튼 클릭 시
-  submit.addEventListener("click", function (event) {
+  submitBtn.addEventListener("click", function (event) {
     event.preventDefault(); // 기본 폼 제출 동작을 막음
     const email = emailInput.value;
     if (validateEmail(email)) {
@@ -98,26 +97,26 @@ function init() {
       return false;
     }
 
-    // 2. '@' 기호의 존재 및 위치 검사(처음이나 끝에 위치하지 않고 한 번만 나타나게)
+    // 2. '@' 기호의 존재 및 위치 검사 (처음이나 끝에 위치하지 않게)
     const index = email.indexOf("@");
     if (index <= 0 || index === email.length - 1) {
       return false;
     }
 
-    // 3. 도메인 부분 검사(@ 뒤에 도메인 이름 존재. 도메인 이름에는 최소한 하나의 점'.' 포함)
+    // 3. 도메인 부분 검사 (@ 뒤의 도메인 이름에는 최소한 하나의 점'.' 포함)
     const local = email.substring(0, index);
     const domain = email.substring(index + 1);
     if (domain.indexOf(".") === -1) {
       return false;
     }
 
-    // 4. 도메인 부분의 길이 검사(2 ~ 63자)
+    // 4. 도메인 부분의 길이 검사 (2 ~ 63자)
     const domainParts = domain.split(".");
     if (domainParts.some((part) => part.length < 2 || part.length > 63)) {
       return false;
     }
 
-    // 5. 유효한 문자 검사(로컬(@ 이전)과 도메인 부분에 알파벳, 숫자, 하이픈, 밑줄, 점만 허용)
+    // 5. 유효한 문자 검사 (로컬(@ 이전)과 도메인 부분에 알파벳, 숫자, 하이픈, 밑줄, 점만 허용)
     const validChars = /^[a-zA-Z0-9._-]+$/;
     if (
       !validChars.test(local) ||
