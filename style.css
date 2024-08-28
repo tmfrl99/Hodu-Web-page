@@ -122,20 +122,13 @@ header .button {
   margin: 0 auto;
 }
 
-.img-container {
+.section2 img {
   width: 660px;
   height: 390px;
   box-sizing: border-box;
-  box-shadow: 10px 10px rgba(255, 255, 255, 0.25);
+  box-shadow: 10px 10px 30px 0px #00000040;
   border-radius: 30px;
-  overflow: hidden;
   margin-right: 110px;
-}
-
-.section2 img {
-  width: 100%;
-  height: 100%;
-  display: block;
 }
 
 .section2-div {
@@ -167,6 +160,7 @@ header .button {
   color: #d97652;
 }
 
+.image-show-more .title,
 .image-show-more .content {
   padding-top: 40px;
   text-align: center;
@@ -178,19 +172,18 @@ header .button {
   justify-content: space-between;
   width: 1280px;
   box-sizing: border-box;
-  border-radius: 30px;
-  box-shadow: 10px 10px rgba(255, 255, 255, 0.25);
 }
 
 .images1 img,
 .images2 img {
-  width: 388px;
-  height: 388px;
-  display: block;
+  width: 378px;
+  height: 378px;
+  border-radius: 30px;
+  box-shadow: 10px 10px 30px 0px #00000040;
 }
 
 .images1 {
-  margin-top: 88px;
+  margin: 88px 0 72px 0;
 }
 
 .continue {
@@ -320,6 +313,8 @@ input::placeholder {
   z-index: 1;
   width: 100%;
   height: 340px;
+  background-image: url('./img/img_9.png');
+  background-position: center;
 }
 
 /* Modal Styles */
