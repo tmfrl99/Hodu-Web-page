@@ -15,6 +15,7 @@ header {
   z-index: 1000;
   background-color: #f2e9d8;
   box-sizing: border-box;
+  min-width: 1320px;
 }
 
 .wrap-header {
